@@ -1,11 +1,8 @@
 body {
   background-color: $dark-gray;
-  background-image: url(../images/background.jpg);
-  background-size: 100%;
   font-family: $base-font;
   color: $white;
   -webkit-font-smoothing: antialiased;
-  background-attachment: fixed;
 }
 
 a {

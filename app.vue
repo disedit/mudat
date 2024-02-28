@@ -6,6 +6,7 @@
       <MudatBento />
     </main>
     <MudatFooter />
+    <div class="background" />
   </div>
 </template>
 
@@ -22,6 +23,15 @@
       display: none;
     }
   }
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background-image: url(./assets/images/background.jpg);
+  background-size: 100%;
+  background-position: center;
+  z-index: -1;
 }
 
 @include media('<medium') {
