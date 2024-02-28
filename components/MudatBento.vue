@@ -5,7 +5,7 @@
         <div class="bento-item-wrapper">
           <img src="~assets/images/bento/bold.jpg" alt="" class="image-bold">
           <div class="bento-item-overlay">
-            <h2>BENTO</h2>
+            <h2>BOLD</h2>
             <p>product design</p>
           </div>
         </div>
@@ -32,13 +32,19 @@
         <div class="bento-item-wrapper">
           <img src="~assets/images/bento/33.jpg" alt="" class="image-33">
           <div class="bento-item-overlay">
-            <h2>33%</h2>
+            <h2>CHAIR 33%</h2>
             <p>product design</p>
           </div>
         </div>
       </li>
       <li class="bento-item">
-        <img src="~assets/images/bento/silla.jpg" alt="" class="image-silla">
+        <div class="bento-item-wrapper">
+          <img src="~assets/images/bento/silla.jpg" alt="" class="image-silla">
+          <div class="bento-item-overlay">
+            <h2>CHAIR 33%</h2>
+            <p>product design</p>
+          </div>
+        </div>
       </li>
     </ul>
     <ul class="bento bento-bottom">
@@ -100,7 +106,6 @@
     overflow: clip;
 
     &-top {
-      margin-right: -10rem;
 
       .bento-item {
         display: flex;
@@ -210,7 +215,6 @@
   .bentos {
     display: flex;
     gap: 1rem;
-    min-height: calc(100vh - 370px);
     justify-content: center;
   }
 

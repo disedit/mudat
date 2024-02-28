@@ -11,6 +11,7 @@
   justify-content: space-between;
   text-transform: uppercase;
   padding: calc(1rem + 1vw) calc(1rem + 2vw);
+  margin-top: 10rem;
 
   &-description {
     text-align: right;
@@ -20,6 +21,7 @@
 @include media('<medium') {
   .footer {
     font-size: .8rem;
+    margin-top: 0;
   }
 }
 </style>

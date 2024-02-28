@@ -1,22 +1,30 @@
 <template>
   <nav class="mudat-nav">
     <span class="mudat-brand">The Brand</span>
-    <MudatLogo class="mudat-logo" />
+    <div class="mudat-logo"><MudatLogo /></div>
     <a href="mailto:info@mudatstudio.com" class="mudat-contact">info@mudatstudio.com</a>
   </nav>
 </template>
 
 <style lang="scss">
   .mudat-nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     text-transform: uppercase;
     justify-content: space-between;
     align-items: center;
     padding: calc(1rem + 1vw) calc(1rem + 2vw);
   }
 
+  .mudat-contact {
+    text-align: right;
+  }
+
   .mudat-logo {
-    height: calc(3rem + 1vh);
+    text-align: center;
+    svg {
+      height: calc(2.5rem + 1vh);
+    }
   }
 
   @include media('<medium') {
