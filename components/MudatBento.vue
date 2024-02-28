@@ -2,88 +2,89 @@
   <section class="bentos">
     <ul class="bento bento-top">
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/CzJ8sWwN5Ge/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/bold.jpg" alt="" class="image-bold">
           <div class="bento-item-overlay">
             <h2>BOLD</h2>
             <p>product design</p>
           </div>
-        </div>
+        </a>
       </li>
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/CteuVF-tbAP/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/bancal.jpg" alt="" class="image-bancal">
           <div class="bento-item-overlay">
             <h2>BANCAL</h2>
             <p>stand design</p>
           </div>
-        </div>
+        </a>
       </li>
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/C3nw8RWtBQj/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/mega.jpg" alt="" class="image-mega">
           <div class="bento-item-overlay">
             <h2 class="mobile-only">MEGAMOBILIARIO</h2>
             <h2 class="desktop-only">MEGA-MOBILIARIO</h2>
             <p>branding</p>
           </div>
-        </div>
+        </a>
       </li>
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/C2ahIXhtE0X/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/33.jpg" alt="" class="image-33">
           <div class="bento-item-overlay">
             <h2>CHAIR 33%</h2>
             <p>product design</p>
           </div>
-        </div>
+        </a>
       </li>
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/C0kBK-7N998/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/silla.jpg" alt="" class="image-silla">
           <div class="bento-item-overlay">
             <h2>CHAIR 33%</h2>
             <p>product design</p>
           </div>
-        </div>
+        </a>
       </li>
     </ul>
     <ul class="bento bento-bottom">
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/C1PCnW2tEpE/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/remodel.jpg" alt="">
           <div class="bento-item-overlay">
             <h2>REMODEL</h2>
             <p>branding</p>
           </div>
-        </div>
+        </a>
       </li>
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/C0e4rNAtD1e/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/studio.jpg" alt="" class="image-studio">
           <div class="bento-item-overlay">
             <h2>STUDIO</h2>
             <p>about us</p>
           </div>
-        </div>
+        </a>
       </li>
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/CyyquzNtAGt/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/bancal2.jpg" alt="" class="image-bancal2">
           <div class="bento-item-overlay">
-            <h2>BANCAL</h2>
+            <h2 class="mobile-only">MEGAMOBILIARIO</h2>
+            <h2 class="desktop-only">MEGA-MOBILIARIO</h2>
             <p>stand design</p>
           </div>
-        </div>
+        </a>
       </li>
       <li class="bento-item">
-        <div class="bento-item-wrapper">
+        <a href="https://www.instagram.com/p/Cr84JZcN-3i/" target="_blank" class="bento-item-wrapper">
           <img src="~assets/images/bento/verao.jpg" alt="" class="image-verao">
           <div class="bento-item-overlay">
             <h2>VERAO</h2>
             <p>product design</p>
           </div>
-        </div>
+        </a>
       </li>
     </ul>
   </section>
@@ -144,7 +145,6 @@
         flex-direction: column;
         font-size: calc(1.5rem + 1vw);
         text-align: center;
-        cursor: default;
         user-select: none;
 
         h2 {

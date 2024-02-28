@@ -1,6 +1,6 @@
 <template>
   <nav class="mudat-nav">
-    <span class="mudat-brand">The Brand</span>
+    <a href="https://www.instagram.com/mudat.studio/" class="mudat-brand">The Brand</a>
     <div class="mudat-logo"><MudatLogo /></div>
     <a href="mailto:info@mudatstudio.com" class="mudat-contact desktop-only">info@mudatstudio.com</a>
     <a href="mailto:info@mudatstudio.com" class="mudat-contact mobile-only">Contact us</a>
