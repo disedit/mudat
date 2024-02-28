@@ -23,7 +23,8 @@
         <div class="bento-item-wrapper">
           <img src="~assets/images/bento/mega.jpg" alt="" class="image-mega">
           <div class="bento-item-overlay">
-            <h2>MEGA MOBILIARIO</h2>
+            <h2 class="mobile-only">MEGAMOBILIARIO</h2>
+            <h2 class="desktop-only">MEGA-MOBILIARIO</h2>
             <p>branding</p>
           </div>
         </div>

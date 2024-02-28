@@ -5,6 +5,7 @@ body {
   font-family: $base-font;
   color: $white;
   -webkit-font-smoothing: antialiased;
+  background-attachment: fixed;
 }
 
 a {
@@ -14,5 +15,17 @@ a {
   &:hover {
     text-decoration: underline;
     text-underline-offset: .4em;
+  }
+}
+
+@include media('>=medium') {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@include media('<medium') {
+  .desktop-only {
+    display: none;
   }
 }

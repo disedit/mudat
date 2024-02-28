@@ -2,8 +2,9 @@
   <nav class="mudat-nav">
     <span class="mudat-brand">The Brand</span>
     <div class="mudat-logo"><MudatLogo /></div>
-    <a href="mailto:info@mudatstudio.com" class="mudat-contact">info@mudatstudio.com</a>
-  </nav>
+    <a href="mailto:info@mudatstudio.com" class="mudat-contact desktop-only">info@mudatstudio.com</a>
+    <a href="mailto:info@mudatstudio.com" class="mudat-contact mobile-only">Contact us</a>
+</nav>
 </template>
 
 <style lang="scss">
@@ -30,23 +31,15 @@
 
   @include media('<medium') {
     .mudat-nav {
-      grid-template-columns: 1fr;
+      font-size: .7rem;
     }
 
     .mudat-logo {
       svg {
         display: block;
         margin: 0 auto;
-        height: 2rem;
+        height: 1.5rem;
       }
-    }
-
-    .mudat-brand {
-      display: none;
-    }
-
-    .mudat-contact {
-      display: none;
     }
   }
 </style>
