@@ -20,7 +20,7 @@
 
 @include media('<medium') {
   .footer {
-    font-size: .8rem;
+    font-size: .7rem;
     margin-top: 0;
   }
 }

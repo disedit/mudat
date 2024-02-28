@@ -219,10 +219,18 @@
   }
 
   .bento {
+    grid-template-columns: 1fr;
     gap: 1rem;
+    margin: 0 1rem;
 
     &-item-overlay {
-      display: none;
+      opacity: 1;
+    }
+
+    &-item {
+      img {
+        height: 50vh !important;
+      }
     }
   }
 }
