@@ -22,15 +22,23 @@
 
   .mudat-logo {
     text-align: center;
+
     svg {
       height: calc(2.5rem + 1vh);
     }
   }
 
   @include media('<medium') {
+    .mudat-nav {
+      grid-template-columns: 1fr;
+    }
+
     .mudat-logo {
-      height: 2rem;
-      margin: 0 auto;
+      svg {
+        display: block;
+        margin: 0 auto;
+        height: 2rem;
+      }
     }
 
     .mudat-brand {
