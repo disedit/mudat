@@ -2,7 +2,7 @@
   <div class="landing">
     <MudatHeader />
     <main class="hero">
-      <h1>[this website is<br>a work in progress]</h1>
+      <h1>[this website is <br> a work in progress]</h1>
       <MudatBento />
     </main>
     <MudatFooter />
