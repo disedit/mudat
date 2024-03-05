@@ -1,3 +1,20 @@
+<script setup>
+/* SEO Metatags */
+const title = 'Mudat Studio'
+const description = 'Multidisciplinary design studio based in Valencia. We seek to create a new concept of elegance in a bold, ambitious and cosmopolitan way.'
+
+useServerSeoMeta({
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description,
+  ogImage: 'https://mudatstudio.com/ogimage.png',
+  twitterCard: 'summary_large_image',
+})
+
+useHead({ title })
+</script>
+
 <template>
   <div class="landing">
     <MudatHeader />
