@@ -120,6 +120,10 @@
     }
 
     &-item {
+      a {
+        display: block;
+      }
+
       img {
         display: block;
         width: 100%;
