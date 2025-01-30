@@ -1,7 +1,7 @@
 <script setup>
 /* Load site settings */
-const settings = useState('settings')
-const global = settings.value.data.story.content
+const settings = await useSettings()
+const global = settings?.value?.data?.story?.content
 
 /* Load page */
 const { slug } = useRoute().params
@@ -10,7 +10,7 @@ const story = await useAsyncStoryblok(
   slug && slug.length > 0 ? slug.join('/') : 'home',
   { version }
 )
-const page = story.value.content
+const page = story?.value?.content
 
 if (!story.value) {
   throw createError({
@@ -46,6 +46,5 @@ useHead({ title })
   <StoryblokComponent
     v-if="story"
     :blok="story.content"
-    :meta="story"
   />
 </template>

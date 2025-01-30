@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "IBM Plex Sans", serif;
-  --color-black: #1d2030;
-  --color-blue: #97e5ef;
-  --color-orange: #f4a671;
+  --font-sans: "Neue Haas Grotesk Display Pro", serif;
+  --color-black: #000;
+  --color-offwhite: #f1f0eb;
   --text-sm: clamp(0.8rem, 0.08vi + 0.78rem, 0.84rem);
   --text-base: clamp(1rem, 0.23vi + 0.94rem, 1.13rem);
   --text-md: clamp(1.25rem, 0.45vi + 1.14rem, 1.5rem);
@@ -14,5 +13,42 @@
   --text-3xl: clamp(3.05rem, 3.06vi + 2.29rem, 4.73rem);
   --text-4xl: clamp(3.81rem, 4.54vi + 2.68rem, 6.31rem);
   --text-5xl: clamp(4.77rem, 6.63vi + 3.11rem, 8.41rem);
-  --spacing-site: 2rem;
+  --spacing-site: 1.5rem;
+  --spacing-navbar: 5.499375rem;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('../fonts/NeueHaasDisplay-BoldItalic.woff2') format('woff2'),
+      url('../fonts/NeueHaasDisplay-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('../fonts/NeueHaasDisplay-Bold.woff2') format('woff2'),
+      url('../fonts/NeueHaasDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('../fonts/NeueHaasDisplay-RomanItalic.woff2') format('woff2'),
+      url('../fonts/NeueHaasDisplay-RomanItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Haas Grotesk Display Pro';
+  src: url('../fonts/NeueHaasDisplay-Roman.woff2') format('woff2'),
+      url('../fonts/NeueHaasDisplay-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

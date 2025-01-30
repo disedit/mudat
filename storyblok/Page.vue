@@ -3,5 +3,9 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <pre>{{ blok }}</pre>
+  <StoryblokComponent
+    v-for="component in blok.body"
+    :key="component._uid"
+    :blok="component"
+  />
 </template>

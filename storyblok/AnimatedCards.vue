@@ -3,5 +3,11 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <pre>{{ blok }}</pre>
+  <section>
+    <StoryblokComponent
+      v-for="card in blok.cards"
+      :key="card._uid"
+      :blok="card"
+    />
+  </section>
 </template>

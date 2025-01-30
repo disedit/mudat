@@ -1,5 +1,5 @@
 export const useSettings = async () => {
-  const siteSettings = useState('settings', () => null)
+  const nuxtApp = useNuxtApp()
   const version = useEnvironment()
   const storyblokApi = useStoryblokApi()
   const { data: settings } = await useAsyncData(
@@ -9,14 +9,14 @@ export const useSettings = async () => {
         version,
         resolve_links: 'url'
       })
+    },
+    {
+      dedupe: 'defer',
+      getCachedData (key) {
+        return nuxtApp.isHydrating ? nuxtApp.payload.data[key] : nuxtApp.static.data[key]
+      }
     }
   )
 
-  siteSettings.value = settings.value
-
-  watch(settings, (newSettings) => {
-    siteSettings.value = newSettings
-  })
-
-  return siteSettings
+  return settings
 }

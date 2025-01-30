@@ -3,5 +3,8 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <pre>{{ blok }}</pre>
+  <article>
+    Card
+    <pre>{{ blok }}</pre>
+  </article>
 </template>
