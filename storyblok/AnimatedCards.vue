@@ -6,7 +6,7 @@ const totalCards = computed(() => props.blok.cards.length)
 let interval
 
 onMounted(() => {
-  const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+  const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
   const duration = props.blok.interval || 2000
 
   interval = setInterval(() => {

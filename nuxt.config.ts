@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseUrl: 'https://mudat.com',
+      baseUrl: 'https://mudatstudio.com',
       environment: 'preview'
     }
   },
@@ -24,5 +24,12 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+  },
+
+  image: {
+    provider: 'storyblok',
+    storyblok: {
+      baseURL: 'https://a.storyblok.com'
+    }
   },
 })
