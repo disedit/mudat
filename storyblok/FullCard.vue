@@ -63,5 +63,18 @@ defineProps({ blok: Object })
   .media {
     width: 100%;
   }
+
+  .media-and-text {
+    width: 50% !important;
+    align-self: center;
+    margin-inline: auto;
+
+    img,
+    video {
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
 }
 </style>

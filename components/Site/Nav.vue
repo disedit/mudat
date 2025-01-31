@@ -6,7 +6,6 @@ const { internalLink } = useLinks()
 const { y } = useWindowScroll()
 const showNavbar = ref(true)
 const lastScrollPosition = ref(0)
-const scrolled = computed(() => y.value > 200 && showNavbar.value)
 
 watch(y, (currentScrollPosition) => {
   if (currentScrollPosition < 0 || Math.abs(currentScrollPosition - lastScrollPosition.value) < 60) {
@@ -19,11 +18,8 @@ watch(y, (currentScrollPosition) => {
 
 <template>
   <header :class="[
-    'fixed top-0 left-0 right-0 bg-offwhite p-site flex items-center gap-site z-50 transition duration-[.5s] ease-out',
-    {
-      'nav-hidden': !showNavbar,
-      'bg-offwhite': scrolled
-    }
+    'fixed top-0 left-0 right-0 p-site flex items-center gap-site z-50 transition duration-[.5s] ease-out',
+    { 'nav-hidden': !showNavbar }
   ]">
     <NuxtLink to="/">
       <SiteLogo class="h-[2.5rem]" />
