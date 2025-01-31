@@ -49,6 +49,7 @@ defineProps({ blok: Object })
       position: absolute;
       inset: 0;
       height: 100%;
+      min-height: 20vh;
       object-fit: cover;
     }
   }
