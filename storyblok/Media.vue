@@ -3,5 +3,5 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <pre>{{ blok }}</pre>
+  <UtilsMedia :media="blok.media" :width="800" class="media" />
 </template>
