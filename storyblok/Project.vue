@@ -2,15 +2,15 @@
 defineProps({ blok: Object })
 
 const { internalLink } = useLinks()
+const preferredMotion = usePreferredReducedMotion()
 
 const show = ref(false)
 const index = ref(2)
-const isReduced = ref(false)
 let interval
 
 function hover () {
   show.value = true
-  if (!isReduced.value) {
+  if (preferredMotion.value === 'no-preference') {
     interval = setInterval(() => index.value--, 100)
   } else {
     index.value = 0
@@ -22,10 +22,6 @@ function unhover () {
   index.value = 2
   clearInterval(interval)
 }
-
-onMounted(() => {
-  isReduced.value = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
-})
 
 onUnmounted(() => {
   interval && clearInterval(interval)
