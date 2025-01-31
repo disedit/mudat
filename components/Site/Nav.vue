@@ -18,7 +18,7 @@ watch(y, (currentScrollPosition) => {
 
 <template>
   <header :class="[
-    'fixed top-0 left-0 right-0 p-site flex items-center gap-site z-50 transition duration-[.5s] ease-out',
+    'fixed bg-offwhite top-0 left-0 right-0 p-site flex items-center gap-site z-50 transition duration-[.5s] ease-out',
     { 'nav-hidden': !showNavbar }
   ]">
     <NuxtLink to="/">
