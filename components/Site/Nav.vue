@@ -1,6 +1,10 @@
 <script lang="ts" setup>
+import { breakpointsTailwind } from '@vueuse/core'
+
 const settings = await useSettings()
 const { internalLink } = useLinks()
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const isMobile = breakpoints.smaller('md')
 
 /* Hide/Show nav bar on scorll */
 const { y } = useWindowScroll()
@@ -19,7 +23,7 @@ watch(y, (currentScrollPosition) => {
 <template>
   <header :class="[
     'fixed bg-offwhite top-0 left-0 right-0 p-site flex items-center gap-site z-50 transition duration-[.5s] ease-out',
-    { 'nav-hidden': !showNavbar }
+    { 'nav-hidden': !showNavbar && !isMobile }
   ]">
     <NuxtLink to="/">
       <SiteLogo class="h-[1.75rem] md:h-[2.5rem]" />
