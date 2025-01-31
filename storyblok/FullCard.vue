@@ -20,7 +20,7 @@ defineProps({ blok: Object })
         :blok="component"
       />
     </div>
-    <div class="card-columns flex gap-site">
+    <div class="card-columns flex flex-col md:flex-row gap-site">
       <div class="card-column relative flex" v-for="component in blok.columns" :key="component._uid">
         <StoryblokComponent :blok="component" />
       </div>

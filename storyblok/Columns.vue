@@ -8,7 +8,8 @@ defineProps({ blok: Object })
     :class="[
       'grid columns gap-site',
       {
-        'stretch-pictures': blok.stretch_pictures
+        'stretch-pictures': blok.stretch_pictures,
+        'reverse-columns': blok.reverse_columns_on_mobile
       }
     ]"
     :style="{
@@ -32,6 +33,22 @@ defineProps({ blok: Object })
   img, video {
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 48rem) {
+  .columns {
+    grid-template-columns: var(--template-sm, 1fr);
+  }
+
+  .reverse-columns {
+    & > *:first-child {
+      grid-row: 2;
+    }
+
+    & > *:nth-child(2) {
+      grid-row: 1;
+    }
   }
 }
 </style>

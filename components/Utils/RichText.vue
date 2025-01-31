@@ -27,10 +27,16 @@ const renderedContent = computed(() => {
     font-size: var(--text-5xl);
     font-weight: 500;
     line-height: 1;
+    hyphens: auto;
 
     &:not(:first-child) {
       margin-top: 3rem;
     }
+  }
+
+  p {
+    line-height: 1.25;
+    hyphens: auto;
   }
 }
 </style>

@@ -22,9 +22,9 @@ watch(y, (currentScrollPosition) => {
     { 'nav-hidden': !showNavbar }
   ]">
     <NuxtLink to="/">
-      <SiteLogo class="h-[2.5rem]" />
+      <SiteLogo class="h-[1.75rem] md:h-[2.5rem]" />
     </NuxtLink>
-    <nav class="ms-auto text-md">
+    <nav class="ms-auto text-base md:text-md">
       <ul class="flex gap-4 uppercase font-bold">
         <li v-for="item in settings?.data.story.content.menu" :key="item._uid">
           <NuxtLink :to="internalLink(item.link)" class="hover:underline">

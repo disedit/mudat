@@ -5,13 +5,13 @@ const { internalLink } = useLinks()
 const preferredMotion = usePreferredReducedMotion()
 
 const show = ref(false)
-const index = ref(2)
+const index = ref(0)
 let interval
 
 function hover () {
   show.value = true
   if (preferredMotion.value === 'no-preference') {
-    interval = setInterval(() => index.value--, 100)
+    interval = setInterval(() => index.value++, 100)
   } else {
     index.value = 0
   }
@@ -19,7 +19,7 @@ function hover () {
 
 function unhover () {
   show.value = false
-  index.value = 2
+  index.value = 0
   clearInterval(interval)
 }
 
@@ -32,30 +32,39 @@ onUnmounted(() => {
   <NuxtLink
     v-editable="blok"
     :to="internalLink(blok.link)"
-    class="grid grid-cols-[auto_1fr] grid-rows-2 gap-site"
+    class="grid md:grid-cols-[auto_1fr] md:grid-rows-2 gap-site mb-10 md:mb-0"
     @mouseenter="hover"
     @mouseleave="unhover"
+    :style="{
+      '--base-height': 'calc(10rem + 10vi)'
+    }"
   >
-    <h2 class="font-medium uppercase text-5xl">
+    <UtilsMedia
+      v-if="blok.thumbnail && blok.thumbnail.filename"
+      :width="750"
+      :media="blok.thumbnail"
+      class="md:hidden w-full aspect-square object-cover"
+    />
+    <h2 class="font-medium uppercase text-5xl mb-site md:mb-0">
       {{ blok.title }}
     </h2>
-    <div class="row-span-2 flex gap-site justify-self-end">
+    <div class="hidden md:flex row-span-2 flex-wrap gap-site justify-self-end justify-start h-(--base-height) overflow-clip flex-row-reverse">
+      <UtilsMedia
+        v-if="blok.thumbnail && blok.thumbnail.filename"
+        :width="750"
+        :media="blok.thumbnail"
+        class="h-(--base-height) w-(--base-height) object-cover"
+      />
       <template v-for="(picture, i) in blok.hover_thumbnails" :key="picture.id">
         <UtilsMedia
           :width="750"
           :media="picture"
           :class="[
-            'h-[20rem] w-[20rem] object-cover',
-            { 'opacity-0': index > i || !show }
+            'h-(--base-height) w-(--base-height) object-cover',
+            { 'opacity-0': index < i || !show }
           ]"
         />
       </template>
-      <UtilsMedia
-        v-if="blok.thumbnail && blok.thumbnail.filename"
-        :width="750"
-        :media="blok.thumbnail"
-        class="h-[20rem] w-[20rem] object-cover"
-      />
     </div>
     <div class="leading-[1.1] text-md self-end">
       <UtilsRichText :content="blok.details" />

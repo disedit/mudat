@@ -14,7 +14,7 @@ defineProps({ blok: Object })
     <div
       v-if="blok.pictures && blok.pictures.length > 0"
       :class="[
-        'flex',
+        'flex md:flex-row flex-col',
         {
           'gap-site': blok.gap,
           'constrain-pictures': blok.constrain_pictures

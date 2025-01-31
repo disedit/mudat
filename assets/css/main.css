@@ -11,8 +11,8 @@
   --text-xl: clamp(1.95rem, 1.29vi + 1.63rem, 2.66rem);
   --text-2xl: clamp(2.44rem, 2.02vi + 1.94rem, 3.55rem);
   --text-3xl: clamp(3.05rem, 3.06vi + 2.29rem, 4.73rem);
-  --text-4xl: clamp(3.81rem, 4.54vi + 2.68rem, 6.31rem);
-  --text-5xl: clamp(3.81rem, 5vi + .5rem, 8.41rem);
+  --text-4xl: clamp(3.5rem, 4.54vi + 2.68rem, 6.31rem);
+  --text-5xl: clamp(3rem, 5vi + .25rem, 8.41rem);
   --spacing-site: 1.5rem;
   --spacing-navbar: 5.499375rem;
   --color-lime-*: initial;
@@ -94,4 +94,11 @@ html {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --spacing-site: 1rem;
+    --spacing-navbar: 3.75rem;
+  }
 }
