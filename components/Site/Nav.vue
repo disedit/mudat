@@ -30,7 +30,7 @@ function isActive(link) {
     'fixed bg-offwhite top-0 left-0 right-0 p-site flex items-center gap-site z-50 transition duration-[.5s] ease-out',
     { 'nav-hidden': !showNavbar && !isMobile }
   ]">
-    <NuxtLink to="/">
+    <NuxtLink to="/" aria-label="Mudat Studio">
       <SiteLogo class="h-[1.75rem] md:h-[2.5rem]" />
     </NuxtLink>
     <nav class="ms-auto text-base md:text-md">
