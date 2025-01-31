@@ -18,7 +18,7 @@ useHead({
 
 <template>
   <div class="font-sans">
-    <NuxtLoadingIndicator :color="false" />
+    <NuxtLoadingIndicator color="#000" />
     <SiteNav />
     <main class="flex flex-col gap-site p-site pt-navbar">
       <slot />
