@@ -3,5 +3,5 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <UtilsMedia :media="blok.media" :width="800" class="media" />
+  <UtilsMedia v-editable="blok" :media="blok.media" :width="800" class="media" />
 </template>

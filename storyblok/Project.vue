@@ -5,11 +5,16 @@ const { internalLink } = useLinks()
 
 const show = ref(false)
 const index = ref(2)
+const isReduced = ref(false)
 let interval
 
 function hover () {
   show.value = true
-  interval = setInterval(() => index.value--, 100)
+  if (!isReduced.value) {
+    interval = setInterval(() => index.value--, 100)
+  } else {
+    index.value = 0
+  }
 }
 
 function unhover () {
@@ -18,6 +23,10 @@ function unhover () {
   clearInterval(interval)
 }
 
+onMounted(() => {
+  isReduced.value = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
+})
+
 onUnmounted(() => {
   interval && clearInterval(interval)
 })
@@ -25,6 +34,7 @@ onUnmounted(() => {
 
 <template>
   <NuxtLink
+    v-editable="blok"
     :to="internalLink(blok.link)"
     class="grid grid-cols-[auto_1fr] grid-rows-2 gap-site"
     @mouseenter="hover"

@@ -4,6 +4,7 @@ defineProps({ blok: Object })
 
 <template>
   <article
+    v-editable="blok"
     :class="[
       'card',
       'flex flex-col gap-site',

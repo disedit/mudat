@@ -12,7 +12,7 @@ const renderedContent = computed(() => {
 </script>
 
 <template>
-  <div v-html="renderedContent" class="rich-text-rendered" />
+  <div v-html="renderedContent" class="rich-text-rendered text-md" />
 </template>
 
 <style lang="scss">
@@ -20,6 +20,16 @@ const renderedContent = computed(() => {
   a {
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  h2 {
+    font-size: var(--text-5xl);
+    font-weight: 500;
+    line-height: 1;
+
+    &:not(:first-child) {
+      margin-top: 3rem;
     }
   }
 }

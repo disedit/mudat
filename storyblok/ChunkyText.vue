@@ -15,19 +15,24 @@ const { richTextEmpty } = useUtils()
 
 <template>
   <div
+    v-editable="blok"
     :class="[
-      'flex flex-col gap-site',
+      'flex flex-col gap-site w-full',
       {
         'justify-start': blok.text_position === 'start',
         'justify-center': blok.text_position === 'center',
         'justify-end': blok.text_position === 'end',
-        'has-background': hasBackground
+        'has-background': hasBackground,
+        'inverted-effect': blok.inverted_effect
       }
     ]"
     :style="backgroundStyles"
   >
-    <div class="text-5xl font-medium hyphens-auto text-justify">
-      {{ blok.text }}
+    <div class="text-container text-5xl font-medium hyphens-auto text-justify">
+      <template v-if="!blok.animate_text">
+        {{ blok.text }}
+      </template>
+      <UtilsAnimatedText v-else :text="blok.text" />
     </div>
     
     <div
@@ -53,5 +58,9 @@ const { richTextEmpty } = useUtils()
   padding: var(--spacing-site);
   background-size: cover;
   background-position: center;
+}
+
+.inverted-effect .text-container {
+  mix-blend-mode: difference;
 }
 </style>

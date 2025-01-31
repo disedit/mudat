@@ -2,15 +2,16 @@
 useHead({
   htmlAttrs: { lang: 'es-ES', class: 'bg-offwhite' },
   meta: [
-    { name: 'theme-color', content: '#fff' },
-    { name: 'msapplication-TileColor', content: '#fff' },
+    { name: 'theme-color', content: '#f1f0eb' },
+    { name: 'msapplication-TileColor', content: '#f1f0eb' },
+    { name: 'apple-mobile-web-app-title', content: 'Mudat' }
   ],
   link: [
-    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-    { rel: 'mask-icon', color: '#652B80', href: '/safari-pinned-tab.svg' },
-   // { rel: 'manifest', color: '#652B80', href: '/site.webmanifest' },
+    { rel: 'icon', type: 'image/png', href: '/favicons/favicon-96x96.png', sizes: '96x96' },
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicons/favicon.svg' },
+    { rel: 'shortcut icon', href: '/favicons/favicon.ico' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' },
+    { rel: 'manifest', href: '/favicons/site.webmanifest' }
   ]
 })
 </script>

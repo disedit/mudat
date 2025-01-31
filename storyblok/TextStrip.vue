@@ -3,7 +3,7 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <div class="flex gap-site text-md leading-[1.1]">
+  <div v-editable="blok" class="flex gap-site text-md leading-[1.1]">
     <div class="grow">
       <UtilsRichText :content="blok.text_left" />
     </div>

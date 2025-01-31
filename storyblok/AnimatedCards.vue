@@ -6,9 +6,12 @@ const totalCards = computed(() => props.blok.cards.length)
 let interval
 
 onMounted(() => {
+  const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+  const duration = props.blok.interval || 2000
+
   interval = setInterval(() => {
     currentCard.value = (currentCard.value >= totalCards.value - 1) ? 0 : currentCard.value + 1
-  }, props.blok.interval || 1000)
+  }, isReduced ? duration * 5 : duration)
 })
 
 onUnmounted(() => {
@@ -17,7 +20,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section>
+  <section v-editable="blok">
     <template v-for="(card, i) in blok.cards" :key="card._uid">
       <StoryblokComponent v-if="i === currentCard" :blok="card"/>
     </template>

@@ -4,7 +4,7 @@ const { internalLink } = useLinks()
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 bg-offwhite p-site flex items-center gap-site">
+  <header class="fixed top-0 left-0 right-0 bg-offwhite p-site flex items-center gap-site z-50">
     <NuxtLink to="/">
       <SiteLogo class="h-[2.5rem]" />
     </NuxtLink>
