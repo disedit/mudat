@@ -56,7 +56,7 @@ defineProps({ blok: Object })
 
 .constrain-pictures .pat-media-wrapper  {
   img, video {
-    height: calc(100dvh - var(--spacing-navbar) - var(--spacing-site));
+    height: calc(100svh - var(--spacing-navbar) - var(--spacing-site));
   }
 }
 

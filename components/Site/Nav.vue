@@ -3,6 +3,7 @@ import { breakpointsTailwind } from '@vueuse/core'
 
 const settings = await useSettings()
 const { internalLink } = useLinks()
+const route = useRoute()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const isMobile = breakpoints.smaller('md')
 
@@ -18,6 +19,10 @@ watch(y, (currentScrollPosition) => {
   showNavbar.value = currentScrollPosition < lastScrollPosition.value
   lastScrollPosition.value = currentScrollPosition
 })
+
+function isActive(link) {
+  return route.fullPath?.startsWith(internalLink(link))
+}
 </script>
 
 <template>
@@ -31,7 +36,7 @@ watch(y, (currentScrollPosition) => {
     <nav class="ms-auto text-base md:text-md">
       <ul class="flex gap-4 uppercase font-bold">
         <li v-for="item in settings?.data.story.content.menu" :key="item._uid">
-          <NuxtLink :to="internalLink(item.link)" class="hover:underline">
+          <NuxtLink :to="internalLink(item.link)" :class="['hover:underline', { active: isActive(item.link) }]">
             {{ item.label }}
           </NuxtLink>
         </li>
@@ -41,7 +46,8 @@ watch(y, (currentScrollPosition) => {
 </template>
 
 <style scoped>
-.router-link-active {
+.router-link-active,
+.active {
   font-style: italic;
 }
 
