@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Neue Haas Grotesk Display Pro", serif;
+  --font-sans: "Neue Haas Grotesk Display Pro", sans-serif;
   --color-black: #000;
   --color-offwhite: #f1f0eb;
   --text-sm: clamp(0.8rem, 0.08vi + 0.78rem, 0.84rem);
