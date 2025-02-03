@@ -36,7 +36,7 @@ function isActive(link) {
     <nav class="ms-auto text-base md:text-md">
       <ul class="flex gap-4 uppercase font-bold">
         <li v-for="item in settings?.data.story.content.menu" :key="item._uid">
-          <NuxtLink :to="internalLink(item.link)" :class="['hover:underline', { active: isActive(item.link) }]">
+          <NuxtLink :to="internalLink(item.link)" :class="['hover:underline', { active: isActive(item.link) }]" prefetchedClass="prefetched">
             {{ item.label }}
           </NuxtLink>
         </li>

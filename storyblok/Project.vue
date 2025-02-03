@@ -35,6 +35,7 @@ onUnmounted(() => {
     class="grid md:grid-cols-[auto_1fr] md:grid-rows-2 gap-site mb-10 md:mb-0"
     @mouseenter="hover"
     @mouseleave="unhover"
+    prefetchedClass="prefetched"
     :style="{
       '--base-height': 'calc(10rem + 10vi)'
     }"
