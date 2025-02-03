@@ -44,7 +44,6 @@ defineProps({ blok: Object })
 <style lang="scss">
 .pat-media-wrapper {
   flex-grow: 1;
-  background: red;
   display: flex;
 
   img, video {
