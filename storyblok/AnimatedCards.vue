@@ -8,7 +8,7 @@ let interval
 
 onMounted(() => {
   const baseDuration = props.blok.interval || 2000
-  const duration = (preferredMotion.value === 'reduce') ? baseDuration * 2.5 : baseDuration
+  const duration = (preferredMotion.value === 'reduce') ? baseDuration * 2 : baseDuration
 
   interval = setInterval(() => {
     if (!props.blok.loop && currentCard.value >= totalCards.value - 1) {
@@ -42,6 +42,33 @@ onUnmounted(() => {
           :width="800"
           preload
         />
+        <template v-else-if="column.component === 'AnimatedMedia'">
+          <NuxtImg
+            v-for="media in column.media"
+            :src="media.filename"
+            :alt="media.alt"
+            :width="800"
+            preload
+          />
+        </template>
+        <template v-else-if="column.component === 'ChunkyText'">
+          <NuxtImg
+            v-if="column.background.filename"
+            :src="column.background.filename"
+            :alt="column.background.alt"
+            :width="800"
+            preload
+          />
+        </template>
+        <template v-else-if="column.component === 'MediaAndText'">
+          <NuxtImg
+            v-if="column.media.filename"
+            :src="column.media.filename"
+            :alt="column.media.alt"
+            :width="800"
+            preload
+          />
+        </template>
       </template>
     </template>
   </div>
