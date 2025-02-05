@@ -8,7 +8,7 @@ let interval
 
 onMounted(() => {
   const baseDuration = props.blok.interval || 2000
-  const duration = (preferredMotion.value === 'reduce') ? baseDuration * 5 : baseDuration
+  const duration = (preferredMotion.value === 'reduce') ? baseDuration * 2.5 : baseDuration
 
   interval = setInterval(() => {
     currentCard.value = (currentCard.value >= totalCards.value - 1) ? 0 : currentCard.value + 1
@@ -18,26 +18,6 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(interval)
 })
-
-/*
-// Preload images
-const img = useImage()
-const images = computed(() => {
-  let preloadImages = []
-  props.blok.cards.forEach(card => {
-    const mediaCards = card.columns.filter(block => block.component === 'Media')
-    mediaCards.forEach(mediaCard => {
-      const url = img(mediaCard.media.filename, { width: 800 })
-      preloadImages.push(url)
-    })
-  })
-  return preloadImages.map(href => ({ rel: "prefetch", href }))
-})
-
-useHead({
-  link: images.value
-})
-*/
 </script>
 
 <template>

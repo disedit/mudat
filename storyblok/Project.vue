@@ -13,7 +13,7 @@ function hover () {
   if (preferredMotion.value === 'no-preference') {
     interval = setInterval(() => index.value++, 100)
   } else {
-    index.value = 0
+    index.value = 10
   }
 }
 
