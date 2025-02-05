@@ -32,7 +32,7 @@ onUnmounted(() => {
   <NuxtLink
     v-editable="blok"
     :to="internalLink(blok.link)"
-    class="grid md:grid-cols-[auto_1fr] md:grid-rows-2 gap-site mb-10 md:mb-0"
+    class="grid md:grid-cols-[auto_1fr] md:grid-rows-2 gap-site mb-10 md:mb-0 hover:italic"
     @mouseenter="hover"
     @mouseleave="unhover"
     prefetchedClass="prefetched"
