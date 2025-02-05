@@ -1,5 +1,6 @@
 export const useSettings = async () => {
   const nuxtApp = useNuxtApp()
+  const { locale } = useI18n()
   const version = useEnvironment()
   const storyblokApi = useStoryblokApi()
   const { data: settings } = await useAsyncData(
@@ -7,7 +8,8 @@ export const useSettings = async () => {
     async () => {
       return await storyblokApi.get('cdn/stories/global', {
         version,
-        resolve_links: 'url'
+        resolve_links: 'url',
+        language: locale.value
       })
     },
     {

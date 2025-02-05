@@ -17,14 +17,31 @@ export default defineNuxtConfig({
 
   modules: [
     ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_TOKEN }],
+    '@nuxtjs/i18n',
     '@nuxt/image',
-    '@vueuse/nuxt',
+    '@vueuse/nuxt'
   ],
 
   vite: {
     plugins: [
       tailwindcss(),
     ],
+  },
+
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'es',
+    locales: [
+      {
+        code: 'es',
+        language: 'es-ES'
+      },
+      {
+        code: 'en',
+        language: 'en-US'
+      }
+    ],
+    baseUrl: 'https://mudatstudio.com'
   },
 
   image: process.env.NUXT_PUBLIC_NODE_ENV === 'production' ? {
