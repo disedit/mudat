@@ -39,4 +39,10 @@ const renderedContent = computed(() => {
     hyphens: auto;
   }
 }
+
+.text-strip .rich-text-rendered {
+  p {
+    line-height: 1.1;
+  }
+}
 </style>
