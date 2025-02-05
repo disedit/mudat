@@ -14,6 +14,7 @@ const switchLocalePath = useSwitchLocalePath()
         <NuxtLink
           :to="switchLocalePath(lang.code)"
           active-class="font-bold"
+          class="hover:underline"
         >
           {{ lang.code }}
         </NuxtLink>
