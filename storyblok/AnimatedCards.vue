@@ -11,6 +11,12 @@ onMounted(() => {
   const duration = (preferredMotion.value === 'reduce') ? baseDuration * 2.5 : baseDuration
 
   interval = setInterval(() => {
+    if (!props.blok.loop && currentCard.value >= totalCards.value - 1) {
+      clearInterval(interval)
+      interval = null
+      return
+    }
+
     currentCard.value = (currentCard.value >= totalCards.value - 1) ? 0 : currentCard.value + 1
   }, duration)
 })
