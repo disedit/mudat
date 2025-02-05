@@ -12,6 +12,7 @@ const tag = computed(() => {
     v-editable="blok"
     :is="tag"
     :to="internalLink(blok.link)"
+    :target="blok.link?.target"
     class="media-and-text flex flex-col gap-site"
   >
     <UtilsMedia :media="blok.media" :width="800" class="media" />
