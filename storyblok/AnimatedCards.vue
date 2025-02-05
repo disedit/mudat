@@ -46,12 +46,13 @@ useHead({
       <StoryblokComponent v-if="i === currentCard" :blok="card" />
     </template>
   </section>
-  <div class="preload sr-only">
+  <div class="preload sr-only" aria-hidden="true">
     <template v-for="card in blok.cards" :key="card._uid">
       <template v-for="column in card.columns" :key="column._uid">
         <NuxtImg
           v-if="column.component === 'Media'"
           :src="column.media.filename"
+          :alt="column.media.alt"
           :width="800"
           preload
         />
