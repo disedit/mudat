@@ -1,7 +1,23 @@
 <script setup>
-defineProps({ blok: Object })
+const props = defineProps({ blok: Object })
+
+const hasMobileMedia = computed(() => {
+  return !!props.blok.media_sm?.filename
+})
 </script>
 
 <template>
-  <UtilsMedia v-editable="blok" :media="blok.media" :width="800" class="media" />
+  <UtilsMedia
+    v-editable="blok"
+    :media="blok.media"
+    :width="800"
+    :class="['media', { 'hidden md:block': hasMobileMedia }]"
+  />
+  <UtilsMedia
+    v-editable="blok"
+    v-if="hasMobileMedia"
+    :media="blok.media_sm"
+    :width="800"
+    class="media md:!hidden"
+  />
 </template>
