@@ -1,7 +1,6 @@
 <script setup>
 defineProps({ blok: Object })
-
-const { richTextEmpty } = useUtils()
+const { hasRichText } = useUtils()
 </script>
 
 <template>
@@ -30,7 +29,7 @@ const { richTextEmpty } = useUtils()
           <StoryblokComponent :blok="component" />
         </div>
       </div>
-    <div v-if="!richTextEmpty(blok.text)" class="pat-text lg:w-[50%] text-md">
+    <div v-if="hasRichText(blok.text)" class="pat-text lg:w-[50%] text-md">
       <UtilsRichText :content="blok.text" />
     </div>
     <div v-if="blok.footer && blok.footer.length > 0">

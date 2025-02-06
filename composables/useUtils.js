@@ -1,6 +1,6 @@
 export const useUtils = () => {
   return {
-    richTextEmpty: (richText) => {
+    hasRichText: (richText) => {
       return richText.content[0].hasOwnProperty('content')
     }
   }

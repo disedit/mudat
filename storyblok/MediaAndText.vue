@@ -1,6 +1,7 @@
 <script setup>
 const props = defineProps({ blok: Object })
 
+const { hasRichText } = useUtils()
 const { internalLink } = useLinks()
 const tag = computed(() => {
   return props.blok.link?.id ? resolveComponent('NuxtLink') : 'div'
@@ -16,7 +17,7 @@ const tag = computed(() => {
     class="media-and-text flex flex-col gap-site"
   >
     <UtilsMedia :media="blok.media" :width="800" class="media" />
-    <div class="leading-[1.1]">
+    <div v-if="hasRichText(blok.text)" class="leading-[1.1]">
       <UtilsRichText :content="blok.text" />
     </div>
   </Component>

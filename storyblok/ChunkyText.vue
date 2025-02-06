@@ -10,7 +10,7 @@ const backgroundStyles = computed(() => {
   return { backgroundImage: `url('${imgUrl}')` }
 })
 
-const { richTextEmpty } = useUtils()
+const { hasRichText } = useUtils()
 </script>
 
 <template>
@@ -36,7 +36,7 @@ const { richTextEmpty } = useUtils()
     </div>
     
     <div
-      v-if="richTextEmpty(blok.detail)"
+      v-if="hasRichText(blok.detail)"
       :class="[
         'text-md mt-8',
         {
