@@ -39,7 +39,7 @@ onUnmounted(() => {
           v-if="column.component === 'Media'"
           :src="column.media.filename"
           :alt="column.media.alt"
-          :width="800"
+          sizes="100vw md:800px lg:1200px xxl:2000px"
           preload
         />
         <template v-else-if="column.component === 'AnimatedMedia'">
@@ -47,7 +47,7 @@ onUnmounted(() => {
             v-for="media in column.media"
             :src="media.filename"
             :alt="media.alt"
-            :width="800"
+            sizes="100vw md:800px lg:1200px xxl:2000px"
             preload
           />
         </template>
@@ -56,7 +56,7 @@ onUnmounted(() => {
             v-if="column.background.filename"
             :src="column.background.filename"
             :alt="column.background.alt"
-            :width="800"
+            :width="1200"
             preload
           />
         </template>
@@ -65,7 +65,7 @@ onUnmounted(() => {
             v-if="column.media.filename"
             :src="column.media.filename"
             :alt="column.media.alt"
-            :width="800"
+            sizes="100vw md:800px lg:1200px xxl:2000px"
             preload
           />
         </template>

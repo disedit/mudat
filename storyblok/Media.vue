@@ -10,14 +10,14 @@ const hasMobileMedia = computed(() => {
   <UtilsMedia
     v-editable="blok"
     :media="blok.media"
-    :width="800"
+    sizes="100vw md:800px lg:1200px xxl:2000px"
     :class="['media', { 'hidden md:block': hasMobileMedia }]"
   />
   <UtilsMedia
     v-editable="blok"
     v-if="hasMobileMedia"
     :media="blok.media_sm"
-    :width="800"
+    sizes="100vw md:800px lg:1200px xxl:2000px"
     class="media md:!hidden"
   />
 </template>

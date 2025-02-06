@@ -28,6 +28,11 @@ onUnmounted(() => {
 
 <template>
   <template v-for="(media, i) in blok.media" :key="media._uid">
-    <UtilsMedia v-if="i === currentPicture" :media="media" :width="800" class="media" />
+    <UtilsMedia
+      v-if="i === currentPicture"
+      :media="media"
+      sizes="100vw md:800px lg:1200px xxl:2000px"
+      class="media"
+    />
   </template>
 </template>
