@@ -30,8 +30,10 @@ function setLoaded (id) {
 
 <template>
   <section v-editable="blok" class="h-viewport">
-    <UtilsBurstCards :cards="blok.cards" v-if="allImagesLoaded" />
-    <div v-else class="text-5xl opacity-25">Loading...</div>
+    <ClientOnly>
+      <UtilsBurstCards :cards="blok.cards" v-if="!allImagesLoaded" />
+      <div v-else class="text-5xl opacity-25">Loading...</div>
+    </ClientOnly>
   </section>
   <div class="preload sr-only" aria-hidden="true" v-if="Object.values(loaded).length > 0">
     <template v-for="card in blok.cards" :key="card._uid">
