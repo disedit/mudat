@@ -15,6 +15,7 @@
   --text-5xl: clamp(3rem, 5vi + .25rem, 7.6rem);
   --spacing-site: 1.5rem;
   --spacing-navbar: 5.499375rem;
+  --spacing-viewport: calc(100svh - var(--spacing-navbar) - var(--spacing-site));
   --color-lime-*: initial;
   --color-red-*: initial;
   --color-yellow-*: initial;

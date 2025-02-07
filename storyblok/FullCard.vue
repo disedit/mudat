@@ -38,7 +38,7 @@ defineProps({ blok: Object })
 <style lang="scss">
 .card {
   &.viewport-height {
-    min-height: calc(100svh - var(--spacing-navbar) - var(--spacing-site));
+    min-height: var(--spacing-viewport);
 
     .card-columns {
       flex-grow: 1;

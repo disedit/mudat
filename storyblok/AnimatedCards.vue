@@ -50,7 +50,8 @@ function setLoaded (id) {
 </script>
 
 <template>
-  <section v-editable="blok" v-if="allImagesLoaded">
+  <section v-editable="blok" v-if="allImagesLoaded" class="h-viewport">
+    <UtilsBurstCards :cards="blok.cards" v-if="allImagesLoaded" />
     <template v-for="(card, i) in blok.cards" :key="card._uid">
       <StoryblokComponent v-if="i === currentCard" :blok="card" />
     </template>
