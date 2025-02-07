@@ -31,7 +31,7 @@ function setLoaded (id) {
 <template>
   <section v-editable="blok" class="h-viewport">
     <ClientOnly>
-      <UtilsBurstCards :cards="blok.cards" v-if="!allImagesLoaded" />
+      <UtilsBurstCards :cards="blok.cards" v-if="allImagesLoaded" />
       <div v-else class="text-5xl opacity-25">Loading...</div>
     </ClientOnly>
   </section>
