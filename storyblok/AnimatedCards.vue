@@ -20,19 +20,24 @@ onMounted(() => {
   })
 })
 
-const allImagesLoaded = computed(() => {
-  return Object.values(loaded[0]).every(value => !!value)
+const firstSlideLoaded = computed(() => {
+  return Object.values(loaded).length > 0 && Object.values(loaded[0]).every(value => !!value)
 })
 
-function setLoaded (i, id) {
-  loaded[i][id] = true
+function setLoaded (i, card) {
+  loaded[i][card] = true
 }
 </script>
 
 <template>
   <section v-editable="blok" class="h-viewport">
     <ClientOnly>
-      <UtilsBurstCards :cards="blok.cards" v-if="allImagesLoaded" />
+      <UtilsBurstCards
+        v-if="firstSlideLoaded"
+        :cards="blok.cards"
+        :interval="blok.interval"
+        :loop="blok.loop"
+      />
       <div v-else class="text-5xl opacity-25">Loading...</div>
     </ClientOnly>
   </section>

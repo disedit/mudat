@@ -11,7 +11,7 @@ const totalCards = computed(() => props.cards.length)
 let interval
 
 onMounted(() => {
-  const duration = (preferredMotion.value === 'reduce') ? props.blok.interval * 2 : props.blok.interval
+  const duration = (preferredMotion.value === 'reduce') ? props.interval * 2 : props.interval
 
   interval = setInterval(() => {
     if (!props.loop && currentCard.value >= totalCards.value - 1) {
