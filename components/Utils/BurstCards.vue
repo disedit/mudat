@@ -1,7 +1,7 @@
 <script setup>
 const props = defineProps({
   cards: { type: Array, required: true },
-  interval: { type: Number, default: 2000 },
+  interval: { type: Number, default: 3000 },
   loop: { type: Boolean, default: true }
 })
 
@@ -11,7 +11,7 @@ const totalCards = computed(() => props.cards.length)
 let interval
 
 onMounted(() => {
-  const duration = (preferredMotion.value === 'reduce') ? props.interval * 2 : props.interval
+  const duration = (preferredMotion.value === 'reduce') ? props.blok.interval * 2 : props.blok.interval
 
   interval = setInterval(() => {
     if (!props.loop && currentCard.value >= totalCards.value - 1) {
