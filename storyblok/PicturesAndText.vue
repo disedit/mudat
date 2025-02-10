@@ -29,7 +29,7 @@ const { hasRichText } = useUtils()
           <StoryblokComponent :blok="component" />
         </div>
       </div>
-    <div v-if="hasRichText(blok.text)" class="pat-text lg:w-[50%] text-md">
+    <div v-if="hasRichText(blok.text)" class="pat-text lg:w-[50%] text-base md:text-md">
       <UtilsRichText :content="blok.text" />
     </div>
     <div v-if="blok.footer && blok.footer.length > 0">

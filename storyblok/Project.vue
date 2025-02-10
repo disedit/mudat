@@ -67,7 +67,7 @@ onUnmounted(() => {
         />
       </template>
     </div>
-    <div class="leading-[1.1] text-md self-end">
+    <div class="leading-[1.1] text-base md:text-md self-end">
       <UtilsRichText :content="blok.details" />
     </div>
   </NuxtLink>

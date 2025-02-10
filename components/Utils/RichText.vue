@@ -12,7 +12,7 @@ const renderedContent = computed(() => {
 </script>
 
 <template>
-  <div v-html="renderedContent" class="rich-text-rendered text-md" />
+  <div v-html="renderedContent" class="rich-text-rendered text-base md:text-md" />
 </template>
 
 <style lang="scss">

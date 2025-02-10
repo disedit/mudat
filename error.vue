@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="p-site h-[100dvh] flex flex-col font-sans text-md gap-site">
+  <div class="p-site h-[100dvh] flex flex-col font-sans text-base md:text-md gap-site">
     <NuxtLink to="/" label="Mudat Studio">
       <SiteLogo class="h-[1.75rem] md:h-[2.5rem]" />
     </NuxtLink>

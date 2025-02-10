@@ -38,7 +38,7 @@ const { hasRichText } = useUtils()
     <div
       v-if="hasRichText(blok.detail)"
       :class="[
-        'text-md mt-8',
+        'text-base md:text-md mt-8',
         {
           'text-left': blok.detail_align === 'left',
           'text-center': blok.detail_align === 'center',

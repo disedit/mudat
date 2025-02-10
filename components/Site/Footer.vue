@@ -5,7 +5,7 @@ const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
-  <div class="p-site grid grid-cols-2 text-md">
+  <div class="p-site grid grid-cols-2 text-base md:text-md">
     <div>
       {{ settings?.data?.story?.content?.footer_text }}
     </div>

@@ -24,7 +24,7 @@ const nextProject = computed(() => {
 </script>
 
 <template>
-  <div v-editable="blok" class="grid grid-cols-2 text-md leading-[0.25] my-site">
+  <div v-editable="blok" class="grid grid-cols-2 text-base md:text-md leading-[0.25] my-site">
     <NuxtLink
       v-if="prevProject"
       :to="internalLink(prevProject.full_slug)"
