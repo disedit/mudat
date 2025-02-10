@@ -40,7 +40,8 @@ const renderedContent = computed(() => {
   }
 }
 
-.text-strip .rich-text-rendered {
+.text-strip .rich-text-rendered,
+.media-and-text .rich-text-rendered {
   p {
     line-height: 1.1;
   }
