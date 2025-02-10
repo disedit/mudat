@@ -21,7 +21,11 @@ defineProps({ blok: Object })
       />
     </div>
     <div class="card-columns flex flex-col md:flex-row gap-site">
-      <div class="card-column relative flex" v-for="component in blok.columns" :key="component._uid">
+      <div
+        v-for="component in blok.columns"
+        :key="component._uid"
+        :class="['card-column relative flex', `column-${component.component}`]"
+      >
         <StoryblokComponent :blok="component" />
       </div>
     </div>
@@ -75,6 +79,17 @@ defineProps({ blok: Object })
       position: static !important;
       width: 100% !important;
       height: auto !important;
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .card {
+    .column-ChunkyText {
+      &:not(:has(.has-background)) {
+        padding-bottom: 5em;
+        flex-grow: 0;
+      }
     }
   }
 }

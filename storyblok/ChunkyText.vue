@@ -17,7 +17,7 @@ const { hasRichText } = useUtils()
   <div
     v-editable="blok"
     :class="[
-      'flex flex-col gap-site w-full',
+      'chunky-text flex flex-col gap-site w-full',
       {
         'justify-start': blok.text_position === 'start',
         'justify-center': blok.text_position === 'center',
