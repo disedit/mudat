@@ -20,7 +20,7 @@ defineProps({ blok: Object })
         :blok="component"
       />
     </div>
-    <div class="card-columns flex flex-col md:flex-row gap-site">
+    <div :class="['card-columns flex flex-col md:flex-row gap-site', { 'has-multiple': blok.columns.length > 1 }]">
       <div
         v-for="component in blok.columns"
         :key="component._uid"
@@ -85,9 +85,9 @@ defineProps({ blok: Object })
 
 @media (max-width: 48rem) {
   .card {
-    .column-ChunkyText {
-      &:not(:has(.has-background)) {
-        padding-bottom: 5em;
+    .card-columns.has-multiple {
+      .column-ChunkyText:not(:has(.has-background)) {
+        padding-bottom: 4em;
         flex-grow: 0;
       }
     }
