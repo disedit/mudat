@@ -45,6 +45,7 @@ const { hasRichText } = useUtils()
 <style lang="scss">
 .pat-media-wrapper {
   flex-grow: 1;
+  flex-basis: 50%;
   display: flex;
 
   img, video {
