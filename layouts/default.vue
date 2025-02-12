@@ -6,7 +6,7 @@ const head = useLocaleHead({
 })
 
 useHead({
-  htmlAttrs: { lang: head.value.htmlAttrs.lang, dir: head.value.htmlAttrs.dir, class: 'bg-offwhite' },
+  htmlAttrs: { lang: 'es-ES', dir: head.value.htmlAttrs.dir, class: 'bg-offwhite' },
   meta: [
     { name: 'theme-color', content: '#f1f0eb' },
     { name: 'msapplication-TileColor', content: '#f1f0eb' },
