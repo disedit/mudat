@@ -16,7 +16,7 @@ const tag = computed(() => {
     :target="blok.link?.target"
     class="media-and-text flex flex-col gap-site"
   >
-    <UtilsMedia :media="blok.media" sizes="100vw md:800px lg:1000px xxl:1700px" class="media" />
+    <UtilsMedia :media="blok.media" sizes="100vw md:600px lg:800px xxl:1300px" class="media" />
     <div v-if="hasRichText(blok.text)" class="leading-[1.1]">
       <UtilsRichText :content="blok.text" />
     </div>

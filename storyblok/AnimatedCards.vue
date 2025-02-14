@@ -48,7 +48,7 @@ function setLoaded (i, card) {
           v-if="['Media', 'MediaAndText'].includes(column.component) && column.media.filename"
           :src="column.media.filename"
           :alt="column.media.alt"
-          sizes="100vw md:800px lg:1000px xxl:1700px"
+          sizes="100vw md:600px lg:800px xxl:1300px"
           preload
           @load="setLoaded(i, column._uid)"
         />
@@ -58,7 +58,7 @@ function setLoaded (i, card) {
             :src="media.filename"
             :alt="media.alt"
             :id="media.id"
-            sizes="100vw md:800px lg:1000px xxl:1700px"
+            sizes="100vw md:600px lg:800px xxl:1300px"
             preload
             @load="setLoaded(i, media.id)"
           />

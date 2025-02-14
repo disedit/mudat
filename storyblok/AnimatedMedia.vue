@@ -31,7 +31,7 @@ onUnmounted(() => {
     <UtilsMedia
       v-if="i === currentPicture"
       :media="media"
-      sizes="100vw md:800px lg:1000px xxl:1700px"
+      sizes="100vw md:600px lg:800px xxl:1300px"
       class="media"
     />
   </template>
