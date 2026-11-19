@@ -46,10 +46,9 @@ onUnmounted(() => {
       :media="blok.thumbnail"
       class="md:hidden w-full aspect-square object-cover"
     />
-    <div class="mb-site md:mb-0">
-      <h2 class="font-medium uppercase text-5xl hyphens-auto">{{ blok.title }}</h2>
-      <p class="leading-[1.1] text-base md:text-md">{{ blok.subtitle }}</p>
-    </div>
+    <h2 class="font-medium uppercase text-5xl hyphens-auto -mb-2">
+      {{ blok.title }}
+    </h2>
     <div class="hidden md:flex row-span-2 flex-wrap gap-site justify-self-end justify-start h-(--base-height) overflow-clip flex-row-reverse">
       <UtilsMedia
         v-if="blok.thumbnail && blok.thumbnail.filename"
